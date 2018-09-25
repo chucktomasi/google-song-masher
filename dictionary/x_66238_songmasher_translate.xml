@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Translate" max_length="40" name="x_66238_songmasher_translate" type="collection">
+        <element attributes="ignore_filter_on_new=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element choice="1" default="7" label="Number of translations" max_length="40" name="number_of_translations" type="choice">
+            <choice/>
+        </element>
+        <element label="Original text" max_length="4000" name="original_text" type="string"/>
+        <element label="Output" max_length="4000" name="output" type="string"/>
+    </element>
+</database>

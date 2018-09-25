@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Interim" max_length="40" name="x_66238_songmasher_interim" type="collection">
+        <element label="From language" max_length="32" name="from_language" reference="x_66238_songmasher_language" type="reference"/>
+        <element label="From text" max_length="4000" name="from_text" type="string"/>
+        <element label="To language" max_length="32" name="to_language" reference="x_66238_songmasher_language" type="reference"/>
+        <element label="To text" max_length="4000" name="to_text" type="string"/>
+        <index name="index">
+            <element name="from_language"/>
+        </index>
+        <index name="index2">
+            <element name="to_language"/>
+        </index>
+    </element>
+</database>
