@@ -4,27 +4,27 @@
             <element>.begin_split</element>
             <position>0</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>1f704f850fbc23007500cbdce1050ec0</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>e6020b090fbc23007500cbdce1050ee9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type>.begin_split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>number</element>
+            <element>title</element>
             <position>1</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>93704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>6a020b090fbc23007500cbdce1050ee9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>.split</element>
             <position>2</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>17704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>ea020b090fbc23007500cbdce1050ee9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>number_of_translations</element>
             <position>3</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>97704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>6e020b090fbc23007500cbdce1050ee9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.end_split</element>
             <position>4</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>1b704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>ee020b090fbc23007500cbdce1050ee9</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type>.end_split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>original_text</element>
             <position>5</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>9b704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>62020b090fbc23007500cbdce1050eea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>output</element>
             <position>6</position>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 17:58:09</sys_created_on>
-            <sys_id>1f704f850fbc23007500cbdce1050ec1</sys_id>
+            <sys_created_on>2018-09-25 18:04:56</sys_created_on>
+            <sys_id>e2020b090fbc23007500cbdce1050eea</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="x_66238_songmasher_translate" sys_domain="global" view="Default view">df7043810f7c23007500cbdce1050e79</sys_ui_section>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 17:58:09</sys_updated_on>
+            <sys_updated_on>2018-09-25 18:04:56</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
