@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><database>
     <element label="Translate" max_length="40" name="x_66238_songmasher_translate" type="collection">
-        <element choice="3" default="7" label="Number of translations" max_length="40" name="number_of_translations" type="choice">
+        <element choice="3" default="javascript:gs.getProperty('x_66238_songmasher.default_num_translations');" label="Number of translations" max_length="40" name="number_of_translations" type="choice">
             <choice>
                 <element inactive_on_update="false" label="1" sequence="0" value="1"/>
                 <element inactive_on_update="false" label="2" sequence="1" value="2"/>
@@ -15,7 +15,15 @@
             </choice>
         </element>
         <element label="Original text" mandatory="true" max_length="4000" name="original_text" type="string"/>
-        <element label="Output" max_length="4000" name="output" read_only="true" type="string"/>
+        <element default="javascript:new GoogleTranslate().getLanguageByValue(gs.getProperty('x_66238_songmasher.start_lang'));&#13;&#10;" label="Original language" max_length="32" name="orig_lang" reference="x_66238_songmasher_language" type="reference"/>
+        <element label="Output" max_length="4000" name="output" type="string"/>
+        <element default="javascript:new GoogleTranslate().getLanguageByValue(gs.getProperty('x_66238_songmasher.end_lang'));" label="Output language" max_length="32" name="out_lang" reference="x_66238_songmasher_language" type="reference"/>
         <element display="true" label="Title" max_length="40" name="title" type="string"/>
+        <index name="index">
+            <element name="out_lang"/>
+        </index>
+        <index name="index2">
+            <element name="orig_lang"/>
+        </index>
     </element>
 </database>

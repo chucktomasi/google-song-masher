@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
+        <name>Content-type</name>
+        <rest_message_function display_value="translate">4497b3c90fbc23007500cbdce1050eaa</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-09-25 22:02:22</sys_created_on>
+        <sys_id>0cc77f850f3063007500cbdce1050e5e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Content-type</sys_name>
+        <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_0cc77f850f3063007500cbdce1050e5e</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-09-25 22:02:22</sys_updated_on>
+        <value>application/json</value>
+    </sys_rest_message_fn_headers>
+</record_update>

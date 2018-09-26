@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>x_66238_songmasher.GoogleTranslate</api_name>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>GoogleTranslate</name>
+        <script><![CDATA[var GoogleTranslate = Class.create();
+
+LANGUAGE_TABLE  = 'x_66238_songmasher_language';
+TRANSLATE_TABLE = 'x_66238_songmasher_translate';
+INTERIM_TABLE   = 'x_66238_songmasher_interim';
+
+GoogleTranslate.prototype = {
+	initialize: function() {
+
+		this.langList = this._getLanguageList();
+
+	},
+
+	process : function(translateGr) {
+
+		var count = parseInt(translateGr.getValue('number_of_translations'));
+		var srcLang = {
+			"sys_id" : translateGr.getValue('orig_lang'),
+			"label"  : translateGr.orig_lang.label.toString(),
+			"code"  : translateGr.orig_lang.value.toString(),
+			"text"   : translateGr.getValue('original_text')
+		};
+		var parentID = translateGr.getValue('sys_id');
+
+		for (var i = 0; i < count; i++) {
+			
+			// Get a random language to translate to
+			var targetLang = this._getRandomLanguage();
+			
+			// Translate the text
+			targetLang.text = this.translateAPI(srcLang.text, srcLang.code, targetLang.code);
+			
+			// Save a new interim record
+			this.createInterimRecord(srcLang, targetLang, parentID, i);
+			
+			// Copy target values to src
+			srcLang = targetLang;
+			
+		}
+		
+		// Translate one time back to final target language
+		var finalLangCode = translateGr.out_lang.value.toString();
+		var finalText = this.translateAPI(srcLang.text, srcLang.code, finalLangCode);
+		
+		// Return final text
+		return finalText;
+	},
+
+	createInterimRecord : function(src, target, parentID, count) {
+
+		/*
+		gs.info('GoogleTranslate().createInterimRecord(): src.code=' + src.code +
+				' src.text=' + src.text +
+				' target.code=' + target.code +
+				' target.text=' + target.text);
+		*/
+		
+		var intGr = new GlideRecord(INTERIM_TABLE);
+		intGr.newRecord();
+		intGr.from_language = src.sys_id;
+		intGr.to_language   = target.sys_id;
+		intGr.from_text     = src.text;
+		intGr.to_text       = target.text;
+		intGr.order = count;
+		intGr.parent = parentID;
+		intGr.insert();
+
+	},
+
+	getLanguageByCode : function(code) {
+
+		var count = this.langList.length;
+
+		for (var i = 0; i < count; i++) {
+			var lang = this.langList[i];
+			if (lang.code == code) {
+				return lang;
+			}
+		}
+
+		return;
+	},
+
+	getLanguageByLabel : function(label) {
+
+		var count = this.langList.length;
+
+		for (var i = 0; i < count; i++) {
+			var lang = this.langList[i];
+			if (lang.label == label) {
+				return lang;
+			}
+		}
+
+		return;
+	},
+
+	translateAPI : function(text, srcLang, targetLang) {
+
+		try { 
+			var r = new sn_ws.RESTMessageV2('x_66238_songmasher.Google Translate', 'translate');
+			r.setStringParameterNoEscape('source_lang', srcLang);
+			r.setStringParameterNoEscape('text', text);
+			r.setStringParameterNoEscape('target_lang', targetLang);
+
+			var response = r.execute();
+			var responseBody = response.getBody();
+			var responseObj = JSON.parse(responseBody);
+			gs.info(responseBody);
+			var httpStatus = response.getStatusCode();
+
+			if (httpStatus == "200") {
+				return responseObj.data.translations[0].translatedText;
+			}
+
+			return;
+
+		}
+		catch(ex) {
+			var message = ex.message;
+			gs.error(message);
+		}
+	},
+
+	_getLanguageList : function() {
+
+		var answer = [];
+		var langGr = new GlideRecord(LANGUAGE_TABLE);
+
+		langGr.addQuery('active', true);
+		langGr.query();
+
+		while (langGr.next()) {
+			var obj = {};
+			obj.label = langGr.getValue('label');
+			obj.code = langGr.getValue('value');
+			obj.sys_id = langGr.getValue('sys_id');
+			answer.push(obj);
+		}
+
+		return answer;
+
+	},
+
+	_getRandomLanguage : function() {
+
+		var rand = Math.floor(Math.random() * this.langList.length);
+
+		return this.langList[rand];
+
+	},
+
+
+	type: 'GoogleTranslate'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>chuck.tomasi</sys_created_by>
+        <sys_created_on>2018-09-25 22:06:41</sys_created_on>
+        <sys_id>16e87bc50f3063007500cbdce1050e8a</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>GoogleTranslate</sys_name>
+        <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
+        <sys_update_name>sys_script_include_16e87bc50f3063007500cbdce1050e8a</sys_update_name>
+        <sys_updated_by>chuck.tomasi</sys_updated_by>
+        <sys_updated_on>2018-09-26 00:17:28</sys_updated_on>
+    </sys_script_include>
+</record_update>

@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update>
-    <sys_dictionary action="INSERT_OR_UPDATE" element="number_of_translations" table="x_66238_songmasher_translate">
+    <sys_dictionary action="INSERT_OR_UPDATE" element="orig_lang" table="x_66238_songmasher_translate">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
         <attributes/>
         <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice>3</choice>
+        <calculation/>
+        <choice/>
         <choice_field/>
         <choice_table/>
-        <column_label>Number of translations</column_label>
+        <column_label>Original language</column_label>
         <comments/>
         <create_roles/>
-        <default_value>javascript:gs.getProperty('x_66238_songmasher.default_num_translations');</default_value>
+        <default_value>javascript:new GoogleTranslate().getLanguageByValue(gs.getProperty('x_66238_songmasher.start_lang'));&#13;
+</default_value>
         <defaultsort/>
         <delete_roles/>
         <dependent/>
@@ -27,20 +23,20 @@
         <dynamic_creation_script/>
         <dynamic_default_value/>
         <dynamic_ref_qual/>
-        <element>number_of_translations</element>
+        <element>orig_lang</element>
         <element_reference>false</element_reference>
         <foreign_database/>
         <function_definition/>
         <function_field>false</function_field>
-        <internal_type display_value="Choice">choice</internal_type>
+        <internal_type display_value="Reference">reference</internal_type>
         <mandatory>false</mandatory>
-        <max_length>40</max_length>
+        <max_length>32</max_length>
         <name>x_66238_songmasher_translate</name>
         <next_element/>
         <primary>false</primary>
         <read_only>false</read_only>
         <read_roles/>
-        <reference/>
+        <reference display_value="" name="x_66238_songmasher_language">x_66238_songmasher_language</reference>
         <reference_cascade_rule/>
         <reference_floats>false</reference_floats>
         <reference_key/>
@@ -52,16 +48,16 @@
         <staged>false</staged>
         <sys_class_name>sys_dictionary</sys_class_name>
         <sys_created_by>chuck.tomasi</sys_created_by>
-        <sys_created_on>2018-09-25 17:57:54</sys_created_on>
-        <sys_id>8a2043810f7c23007500cbdce1050e78</sys_id>
+        <sys_created_on>2018-09-25 23:03:51</sys_created_on>
+        <sys_id>5d7684110f7063007500cbdce1050e63</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_name>Number of translations</sys_name>
+        <sys_name>Original language</sys_name>
         <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
-        <sys_update_name>sys_dictionary_x_66238_songmasher_translate_number_of_translations</sys_update_name>
+        <sys_update_name>sys_dictionary_x_66238_songmasher_translate_orig_lang</sys_update_name>
         <sys_updated_by>chuck.tomasi</sys_updated_by>
-        <sys_updated_on>2018-09-25 23:12:34</sys_updated_on>
+        <sys_updated_on>2018-09-25 23:09:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
