@@ -22,6 +22,8 @@ GoogleTranslate.prototype = {
 	process : function(translateGr) {
 
 		var count = parseInt(translateGr.getValue('number_of_translations'));
+		var maxRetries = gs.getProperty('x_66238_songmasher.max_retries');
+		
 		var srcLang = {
 			"sys_id" : translateGr.getValue('orig_lang'),
 			"label"  : translateGr.orig_lang.label.toString(),
@@ -29,17 +31,33 @@ GoogleTranslate.prototype = {
 			"text"   : translateGr.getValue('original_text')
 		};
 		var parentID = translateGr.getValue('sys_id');
-
-		for (var i = 0; i < count; i++) {
+		var watchDog = 0;
+		var translationError = false;
+		
+		for (var i = 0; i < count && watchDog < maxRetries; i++) {
 			
 			// Get a random language to translate to
 			var targetLang = this._getRandomLanguage();
 			
 			// Translate the text
-			targetLang.text = this.translateAPI(srcLang.text, srcLang.code, targetLang.code);
+			do {
+				
+				translationError = false;
+				targetLang.text = this.translateAPI(srcLang.text, srcLang.code, targetLang.code);
+				
+				// If an error was encountered, try again...
+				if (targetLang.text == "error") {
+					++watchDog;
+					translationError = true;
+					targetLang = this._getRandomLanguage();
+				}
+				
+			} while (translationError && watchDog < maxRetries);	
 			
 			// Save a new interim record
-			this.createInterimRecord(srcLang, targetLang, parentID, i);
+			if (!translationError) {
+				this.createInterimRecord(srcLang, targetLang, parentID, i);
+			}
 			
 			// Copy target values to src
 			srcLang = targetLang;
@@ -121,7 +139,7 @@ GoogleTranslate.prototype = {
 				return responseObj.data.translations[0].translatedText;
 			}
 
-			return;
+			return "error";
 
 		}
 		catch(ex) {
@@ -149,6 +167,36 @@ GoogleTranslate.prototype = {
 		return answer;
 
 	},
+	
+	getLanguagePath : function(translateGr) {
+		
+		var path = [];
+		path.push(translateGr.orig_lang.getDisplayValue());
+		
+		var intGr = new GlideRecord(INTERIM_TABLE);
+		intGr.addQuery('parent', translateGr.getUniqueValue());
+		intGr.orderBy('order');
+		intGr.query();
+		
+		while (intGr.next()) {
+			path.push(intGr.to_language.getDisplayValue());
+		}
+		
+		path.push(translateGr.out_lang.getDisplayValue());
+		
+		return path.join('> ');
+		
+	},
+	
+	deleteOldInterims : function(gr) {
+		
+		var intGr = new GlideRecord(INTERIM_TABLE);
+		
+		intGr.addQuery('parent', gr.getValue('sys_id'));
+		intGr.query();
+		intGr.deleteMultiple();
+		
+	},
 
 	_getRandomLanguage : function() {
 
@@ -165,13 +213,13 @@ GoogleTranslate.prototype = {
         <sys_created_by>chuck.tomasi</sys_created_by>
         <sys_created_on>2018-09-25 22:06:41</sys_created_on>
         <sys_id>16e87bc50f3063007500cbdce1050e8a</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name>GoogleTranslate</sys_name>
         <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
         <sys_policy>read</sys_policy>
         <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
         <sys_update_name>sys_script_include_16e87bc50f3063007500cbdce1050e8a</sys_update_name>
         <sys_updated_by>chuck.tomasi</sys_updated_by>
-        <sys_updated_on>2018-09-26 00:17:28</sys_updated_on>
+        <sys_updated_on>2018-09-27 15:21:59</sys_updated_on>
     </sys_script_include>
 </record_update>

@@ -23,36 +23,38 @@
         <list_link>false</list_link>
         <list_save_with_form_button>false</list_save_with_form_button>
         <list_style/>
-        <name>Translate</name>
+        <name>Translate to Target</name>
         <onclick/>
         <order>100</order>
-        <script><![CDATA[var gt = new GoogleTranslate();
-gt.deleteOldInterims(current);
-var output = gt.process(current);
-current.output = output;
-current.path = gt.getLanguagePath(current);
-current.update();
-action.setRedirectURL(current);]]></script>
+        <script><![CDATA[var fromCode = current.from_language.value.toString();
+var toCode = current.parent.out_lang.value.toString();
+var srcText = current.getValue('to_text');
+var text = new GoogleTranslate().translateAPI(srcText, fromCode, toCode);
+var translateGr = new GlideRecord('x_66238_songmasher_translate');
+translateGr.get(current.getValue('parent'));
+translateGr.output = text;
+translateGr.update();
+action.setRedirectURL(translateGr);]]></script>
         <show_insert>false</show_insert>
         <show_multiple_update>false</show_multiple_update>
         <show_query>false</show_query>
         <show_update>true</show_update>
         <sys_class_name>sys_ui_action</sys_class_name>
         <sys_created_by>chuck.tomasi</sys_created_by>
-        <sys_created_on>2018-09-25 23:59:41</sys_created_on>
+        <sys_created_on>2018-09-26 00:39:52</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>9ef2d4190f7063007500cbdce1050e5f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>Translate</sys_name>
+        <sys_id>d33b909d0f7063007500cbdce1050e5a</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Translate to Target</sys_name>
         <sys_overrides/>
         <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
         <sys_policy/>
         <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
-        <sys_update_name>sys_ui_action_9ef2d4190f7063007500cbdce1050e5f</sys_update_name>
+        <sys_update_name>sys_ui_action_d33b909d0f7063007500cbdce1050e5a</sys_update_name>
         <sys_updated_by>chuck.tomasi</sys_updated_by>
-        <sys_updated_on>2018-09-27 15:24:01</sys_updated_on>
-        <table>x_66238_songmasher_translate</table>
+        <sys_updated_on>2018-09-26 00:40:40</sys_updated_on>
+        <table>x_66238_songmasher_interim</table>
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>

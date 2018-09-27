@@ -3,32 +3,62 @@
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>title</element>
-            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">20f1c7090fbc23007500cbdce1050e8d</list_id>
+            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e9a070790f3023007500cbdce1050e95</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>0</position>
             <sum>false</sum>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 18:04:31</sys_created_on>
-            <sys_id>e4f1c7090fbc23007500cbdce1050e8d</sys_id>
+            <sys_created_on>2018-09-27 15:25:09</sys_created_on>
+            <sys_id>29a070790f3023007500cbdce1050e96</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 18:04:31</sys_updated_on>
+            <sys_updated_on>2018-09-27 15:25:09</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list_element action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
             <element>number_of_translations</element>
-            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">20f1c7090fbc23007500cbdce1050e8d</list_id>
+            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e9a070790f3023007500cbdce1050e95</list_id>
             <max_value>false</max_value>
             <min_value>false</min_value>
             <position>1</position>
             <sum>false</sum>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 18:04:31</sys_created_on>
-            <sys_id>68f1c7090fbc23007500cbdce1050e8d</sys_id>
+            <sys_created_on>2018-09-27 15:25:09</sys_created_on>
+            <sys_id>eda070790f3023007500cbdce1050e96</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 18:04:31</sys_updated_on>
+            <sys_updated_on>2018-09-27 15:25:09</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_created_on</element>
+            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e9a070790f3023007500cbdce1050e95</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>2</position>
+            <sum>false</sum>
+            <sys_created_by>chuck.tomasi</sys_created_by>
+            <sys_created_on>2018-09-27 15:25:09</sys_created_on>
+            <sys_id>61a070790f3023007500cbdce1050e97</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chuck.tomasi</sys_updated_by>
+            <sys_updated_on>2018-09-27 15:25:09</sys_updated_on>
+        </sys_ui_list_element>
+        <sys_ui_list_element action="INSERT_OR_UPDATE">
+            <average_value>false</average_value>
+            <element>sys_updated_on</element>
+            <list_id display_value="x_66238_songmasher_translate" element="NULL" name="x_66238_songmasher_translate" parent="NULL" relationship="NULL" sys_domain="global" view="Default view">e9a070790f3023007500cbdce1050e95</list_id>
+            <max_value>false</max_value>
+            <min_value>false</min_value>
+            <position>3</position>
+            <sum>false</sum>
+            <sys_created_by>chuck.tomasi</sys_created_by>
+            <sys_created_on>2018-09-27 15:25:09</sys_created_on>
+            <sys_id>e1a070790f3023007500cbdce1050e97</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>chuck.tomasi</sys_updated_by>
+            <sys_updated_on>2018-09-27 15:25:09</sys_updated_on>
         </sys_ui_list_element>
         <sys_ui_list action="INSERT_OR_UPDATE">
             <average_value>false</average_value>
@@ -42,10 +72,10 @@
             <sum>false</sum>
             <sys_class_name>sys_ui_list</sys_class_name>
             <sys_created_by>chuck.tomasi</sys_created_by>
-            <sys_created_on>2018-09-25 18:04:31</sys_created_on>
+            <sys_created_on>2018-09-27 15:25:09</sys_created_on>
             <sys_domain>global</sys_domain>
             <sys_domain_path>/</sys_domain_path>
-            <sys_id>20f1c7090fbc23007500cbdce1050e8d</sys_id>
+            <sys_id>e9a070790f3023007500cbdce1050e95</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>x_66238_songmasher_translate</sys_name>
             <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
@@ -53,7 +83,7 @@
             <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
             <sys_update_name>sys_ui_list_x_66238_songmasher_translate_null</sys_update_name>
             <sys_updated_by>chuck.tomasi</sys_updated_by>
-            <sys_updated_on>2018-09-25 18:04:31</sys_updated_on>
+            <sys_updated_on>2018-09-27 15:25:09</sys_updated_on>
             <sys_user/>
             <view display_value="Default view" name="NULL">Default view</view>
             <view_name/>
