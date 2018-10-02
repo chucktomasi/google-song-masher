@@ -15,9 +15,9 @@
             </choice>
         </element>
         <element label="Original text" mandatory="true" max_length="4000" name="original_text" type="string"/>
-        <element default="javascript:new GoogleTranslate().getLanguageByCode(gs.getProperty('x_66238_songmasher.start_lang')).sys_id;&#13;&#10;" label="Original language" max_length="32" name="orig_lang" reference="x_66238_songmasher_language" type="reference"/>
+        <element default="javascript:new GoogleTranslate().getLanguageByCode(gs.getProperty('x_66238_songmasher.start_lang')).sys_id;" label="Original language" max_length="32" name="orig_lang" reference="x_66238_songmasher_language" type="reference"/>
         <element label="Output" max_length="4000" name="output" type="string"/>
-        <element default="javascript:new GoogleTranslate().getLanguageByCode(gs.getProperty('x_66238_songmasher.end_lang')).sys_id;&#13;&#10;" label="Output language" max_length="32" name="out_lang" reference="x_66238_songmasher_language" type="reference"/>
+        <element default="javascript:new GoogleTranslate().getLanguageByCode(gs.getProperty('x_66238_songmasher.end_lang')).sys_id;" label="Output language" max_length="32" name="out_lang" reference="x_66238_songmasher_language" type="reference"/>
         <element label="Path" max_length="160" name="path" read_only="true" type="string"/>
         <element display="true" label="Title" max_length="40" name="title" type="string"/>
         <index name="index">

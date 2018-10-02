@@ -11,6 +11,7 @@
         <sys_class_name>sys_ui_module</sys_class_name>
         <sys_created_by>chuck.tomasi</sys_created_by>
         <sys_created_on>2018-09-25 17:52:59</sys_created_on>
+        <sys_customer_update>false</sys_customer_update>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>6f4fbe450fbc23007500cbdce1050e34</sys_id>
@@ -18,6 +19,7 @@
         <sys_name>Language</sys_name>
         <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
         <sys_policy/>
+        <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
         <sys_update_name>sys_ui_module_6f4fbe450fbc23007500cbdce1050e34</sys_update_name>
         <sys_updated_by>chuck.tomasi</sys_updated_by>

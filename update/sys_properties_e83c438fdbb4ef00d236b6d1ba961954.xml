@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
     <sys_properties action="INSERT_OR_UPDATE">
         <choices/>
-        <description/>
+        <description>Enter your Google Translate API key. You can obtain it from the  &lt;a href="https://console.cloud.google.com/apis/credentials"&gt;Google Cloud Platform API&lt;/a&gt;</description>
         <ignore_cache>false</ignore_cache>
         <is_private>false</is_private>
-        <name>x_66238_songmasher.default_num_translations</name>
+        <name>x_66238_songmasher.api_key</name>
         <read_roles/>
-        <suffix>default_num_translations</suffix>
+        <suffix>api_key</suffix>
         <sys_class_name>sys_properties</sys_class_name>
         <sys_created_by>chuck.tomasi</sys_created_by>
-        <sys_created_on>2018-09-25 23:11:35</sys_created_on>
+        <sys_created_on>2018-10-01 23:59:58</sys_created_on>
         <sys_customer_update>false</sys_customer_update>
-        <sys_id>0628c8510f7063007500cbdce1050e95</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_name>x_66238_songmasher.default_num_translations</sys_name>
+        <sys_id>e83c438fdbb4ef00d236b6d1ba961954</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_66238_songmasher.api_key</sys_name>
         <sys_package display_value="Song masher" source="x_66238_songmasher">1e4f76450fbc23007500cbdce1050e5e</sys_package>
         <sys_policy/>
         <sys_replace_on_upgrade>false</sys_replace_on_upgrade>
         <sys_scope display_value="Song masher">1e4f76450fbc23007500cbdce1050e5e</sys_scope>
-        <sys_update_name>sys_properties_0628c8510f7063007500cbdce1050e95</sys_update_name>
+        <sys_update_name>sys_properties_e83c438fdbb4ef00d236b6d1ba961954</sys_update_name>
         <sys_updated_by>chuck.tomasi</sys_updated_by>
-        <sys_updated_on>2018-09-25 23:12:43</sys_updated_on>
-        <type>integer</type>
-        <value>8</value>
+        <sys_updated_on>2018-10-01 23:59:58</sys_updated_on>
+        <type>string</type>
+        <value/>
         <write_roles/>
     </sys_properties>
-    <sys_translated_text action="delete_multiple" query="documentkey=0628c8510f7063007500cbdce1050e95"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=e83c438fdbb4ef00d236b6d1ba961954"/>
 </record_update>
